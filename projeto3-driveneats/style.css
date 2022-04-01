@@ -86,6 +86,10 @@ p{font-family: "roboto";}
     text-align: justify;
 }
 
+.selected{
+    box-shadow: 0px 0px 0px 5px #32B72F inset;
+}
+
 .meal img{
     width: 144px;
     height: 87px;
