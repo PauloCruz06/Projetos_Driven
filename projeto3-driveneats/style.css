@@ -116,6 +116,7 @@ p{font-family: "roboto";}
 }
 
 /*Botão de fechar pedido*/
+
 .bottom{
     width: 100%;
     height: 92px;
@@ -135,6 +136,18 @@ p{font-family: "roboto";}
     border: none;
     background-color: #CBCBCB;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button-confirm{
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    border: none;
+    background-color: #32B72F;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -143,9 +156,27 @@ p{font-family: "roboto";}
     height: 100%;
     background: none;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
     color: #FFFFFF;
+}
+
+.button-confirm div{
+    width: 200px;
+    height: 100%;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.hidden{
+    display: none;
 }
