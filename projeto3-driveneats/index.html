@@ -12,7 +12,9 @@
     />
     <link 
         href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    />
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -30,6 +32,7 @@
                 <p>Frango Yin Yang</p>
                 <p>Um pouco de batata, um pouco de salada</p>
                 <p>R$ 14,90</p>
+                <p class="hidden">14.90</p>
             </button>
             <button class="meal" onclick="selectMainMeal(this)"></button>
             <button class="meal" onclick="selectMainMeal(this)"></button>
@@ -44,6 +47,7 @@
                 <p>Coquinha gelada</p>
                 <p>Lata 350ml</p>
                 <p>R$ 4,90</p>
+                <p class="hidden">4.90</p>
             </button>
             <button class="meal" onclick="selectDrink(this)"></button>
             <button class="meal" onclick="selectDrink(this)"></button>
@@ -58,6 +62,7 @@
                 <p>Pudim</p>
                 <p>Apenas pudim</p>
                 <p>R$ 7,90</p>
+                <p class="hidden">7.90</p>
             </button>
             <button class="meal" onclick="selectDessert(this)"></button>
             <button class="meal" onclick="selectDessert(this)"></button>
@@ -67,9 +72,22 @@
         <button class="button-box">
             <div><p>Selecione os 3 itens para fechar o pedido</p></div>
         </button>
-        <button class="button-confirm hidden">
+        <button class="button-confirm hidden" onclick="confirmOrder()">
             <div><p>Fechar pedido</p></div>
         </button>
+    </div>
+    <div class="superbackground hidden">
+        <div class="box-confirm">
+            <p>Confirme seu pedido</p>
+            <div class="checklists">
+                <div><p></p><p></p></div>
+                <div><p></p><p></p></div>
+                <div><p></p><p></p></div>
+                <div><p></p><p></p></div>
+            </div>
+            <a class="wa-link"><p>Tudo certo, pode pedir!</p></a>
+            <button>Cancelar</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
