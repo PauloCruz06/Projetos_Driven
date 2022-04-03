@@ -2,12 +2,14 @@ let cont = 0;
 let aux = "";
 let nam = ["", "", "", "TOTAL"];
 let val = [0, 0, 0, 0];
+let address = ["", ""];
 
 document.querySelector(".checklists div:nth-child(4) p:first-child").innerHTML = nam[3];
 
 function selectMainMeal(meal){
     const selectedMeal = document.querySelector(".menu:nth-child(2) .selected");
     if(selectedMeal !== null && selectedMeal !== meal){
+        document.querySelector(".menu:nth-child(2) .selected .ion").classList.add("hidden");
         selectedMeal.classList.remove("selected");
         cont--;
     }
@@ -15,6 +17,7 @@ function selectMainMeal(meal){
         cont--;
     }
     meal.classList.add("selected");
+    document.querySelector(".menu:nth-child(2) .selected .ion").classList.remove("hidden");
     cont++;
 
     if(cont == 3){
@@ -37,6 +40,7 @@ function selectMainMeal(meal){
 function selectDrink(meal){
     const selectedMeal = document.querySelector(".menu:nth-child(4) .selected");
     if(selectedMeal !== null && selectedMeal !== meal){
+        document.querySelector(".menu:nth-child(4) .selected .ion").classList.add("hidden");
         selectedMeal.classList.remove("selected");
         cont--;
     }
@@ -44,6 +48,7 @@ function selectDrink(meal){
         cont--;
     }
     meal.classList.add("selected");
+    document.querySelector(".menu:nth-child(4) .selected .ion").classList.remove("hidden");
     cont++;
 
     if(cont == 3){
@@ -65,6 +70,7 @@ function selectDrink(meal){
 function selectDessert(meal){
     const selectedMeal = document.querySelector(".menu:nth-child(6) .selected");
     if(selectedMeal !== null && selectedMeal !== meal){
+        document.querySelector(".menu:nth-child(6) .selected .ion").classList.add("hidden");
         selectedMeal.classList.remove("selected");
         cont--;
     }
@@ -72,6 +78,7 @@ function selectDessert(meal){
         cont--;
     }
     meal.classList.add("selected");
+    document.querySelector(".menu:nth-child(6) .selected .ion").classList.remove("hidden");
     cont++;
 
     if(cont == 3){
@@ -92,4 +99,16 @@ function selectDessert(meal){
 
 function confirmOrder(){
     document.querySelector(".superbackground").classList.remove("hidden");
+}
+
+function getAddress(){
+    address[0] = prompt("Qual o seu nome?");
+    address[1] = prompt("Qual o seu endereço?");
+}
+
+function sendOrder(){
+    let uri = "";
+    uri = "Olá, gostaria de fazer o pedido:\n- Prato: "+nam[0]+"\n- Bebida: "+nam[1]+"\n- Sobremesa: "+nam[2]+"\nTotal: R$ "+ val[3].toFixed(2)+"\n\nNome: "+address[0]+"\nEndereço: "+address[1];
+    console.log("https://wa.me/5584999309150?text="+encodeURIComponent(uri));
+    document.querySelector("a").href = "https://wa.me/5584999309150?text="+encodeURIComponent(uri);
 }

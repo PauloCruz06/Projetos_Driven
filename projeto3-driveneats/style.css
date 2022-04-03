@@ -89,6 +89,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     text-align: justify;
+    position: relative;
   }
   
   .selected {
@@ -120,6 +121,14 @@ body {
     color: #000000;
   }
   
+  .ion {
+    color: #32b72f;
+    font-size: 16px;
+    position: absolute;
+    right: 12px;
+    bottom: 15px;
+  }
+
   /*Botão de fechar pedido*/
   
   .bottom {
@@ -252,6 +261,7 @@ body {
     align-items: center;
     font-weight: 700;
     font-size: 22px;
+    text-decoration: none;
   }
   
   .box-confirm > button {
