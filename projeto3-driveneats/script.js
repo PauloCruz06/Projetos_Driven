@@ -101,6 +101,10 @@ function confirmOrder(){
     document.querySelector(".superbackground").classList.remove("hidden");
 }
 
+function cancelOrder(){
+    document.querySelector(".superbackground").classList.add("hidden");
+}
+
 function getAddress(){
     address[0] = prompt("Qual o seu nome?");
     address[1] = prompt("Qual o seu endereço?");
